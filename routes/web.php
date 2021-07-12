@@ -14,5 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    $data = [
+        'name' => 'Denis',
+        'colors' => ['Nero', 'Blu Oltremare'],
+        'videogames' => ['League of Legends', 'Smite', 'Fallout 4', 'The witcher 3', 'Metin 2', 'Alien Isolation', 'Minecraft']
+    ];
+    return view('home', $data);
 });
